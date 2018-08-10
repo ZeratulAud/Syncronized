@@ -70,13 +70,13 @@ namespace UnityStandardAssets._2D
             //only control the player if grounded or airControl is turned on
             if (m_Grounded || m_AirControl)
             {
-                // Reduce the speed if crouching by the crouchSpeed multiplier
-                move = (crouch ? move*m_CrouchSpeed : move);
+                                 // Reduce the speed if crouching by the crouchSpeed multiplier
+               move = (crouch ? move*m_CrouchSpeed : move);
 
-                // The Speed animator parameter is set to the absolute value of the horizontal input.
+                                  // The Speed animator parameter is set to the absolute value of the horizontal input.
                 m_Anim.SetFloat("Speed", Mathf.Abs(move));
 
-                // Move the character
+                                     // Move the character
                 m_Rigidbody2D.velocity = new Vector2(move*m_MaxSpeed, m_Rigidbody2D.velocity.y);
 
                 // If the input is moving the player right and the player is facing left...
